@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/hud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="10dp"
+        android:background="#66000000"
+        android:fontFamily="monospace"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:text="OpenFlight 0.06&#10;UUDD Домодедово&#10;ВПП 14/32" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="10dp"
+        android:background="#44000000"
+        android:padding="4dp"
+        android:textColor="#CCFFFFFF"
+        android:textSize="11sp"
+        android:text="OpenFlight 0.06" />
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="284dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_gear"
+            style="@style/OFButton"
+            android:text="ШАССИ: ВЫП" />
+
+        <Button
+            android:id="@+id/btn_flaps_up"
+            style="@style/OFButton"
+            android:text="ЗАКРЫЛКИ +" />
+
+        <Button
+            android:id="@+id/btn_flaps_down"
+            style="@style/OFButton"
+            android:text="ЗАКРЫЛКИ -" />
+
+        <Button
+            android:id="@+id/btn_brakes"
+            style="@style/OFButton"
+            android:text="ТОРМОЗА: ВЫКЛ" />
+
+        <Button
+            android:id="@+id/btn_camera"
+            style="@style/OFButton"
+            android:text="КАМ: ЧЕЙЗ" />
+    </LinearLayout>
+
+    <com.openflight.sim.ThrottleView
+        android:id="@+id/throttle"
+        android:layout_width="100dp"
+        android:layout_height="256dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp" />
+
+    <com.openflight.sim.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="18dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_rudder_left"
+            style="@style/OFButton"
+            android:layout_marginTop="0dp"
+            android:minWidth="64dp"
+            android:text="◄ РУЛЬ" />
+
+        <Button
+            android:id="@+id/btn_rudder_right"
+            style="@style/OFButton"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="8dp"
+            android:minWidth="64dp"
+            android:text="РУЛЬ ►" />
+    </LinearLayout>
+
+</FrameLayout>
